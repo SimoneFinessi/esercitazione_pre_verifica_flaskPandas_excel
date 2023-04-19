@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form action="/es1" method = "post">
+            <p>Inserisci il nome  <input type = "text" name = "nome" /></p>
+            <p>Inserisci il cognome <input type = "text" name = "cognome" /></p>
+            <p><input type = "submit" value = "invia" /></p>
+        </form>
+
+        
+        {% for genere in list %}
+            <a href="/es2/{{genere}}">{{genere}}</a><br>
+        {% endfor %}
+
+        <form action="/name_contains_products" method = "post">
+            <p>Inserisci il nome dell film <input type = "text" name = "name_contains" /></p>
+            <p><input type = "submit" value = "per nome" /></p>
+        </form>
+
+        <form action="/category_counts" method = "post">
+            <p><input type = "submit" value = "contare" /></p>
+        </form>
+
+        <form action="/category_counts_chart" method = "post">
+            <p><input type = "submit" value = "grafico" /></p>
+        </form>
+    </body>
+</html>
