@@ -14,13 +14,15 @@
             <a href="/es2/{{genere}}">{{genere}}</a><br>
         {% endfor %}
 
-        <form action="/name_contains_products" method = "post">
-            <p>Inserisci il nome dell film <input type = "text" name = "name_contains" /></p>
-            <p><input type = "submit" value = "per nome" /></p>
+        <form action="/es3" method = "post">
+            <p><input type = "submit" value = "clienti per ogni stato" /></p>
         </form>
 
-        <form action="/category_counts" method = "post">
-            <p><input type = "submit" value = "contare" /></p>
+        <form action="/es4" method = "post">
+            <p><input type = "submit" value = "lo stato con il maggior numero di clienti" /></p>
+        </form>
+        <form action="/es5" method = "post">
+            <p><input type = "submit" value = "grafico" /></p>
         </form>
 
         <form action="/category_counts_chart" method = "post">
