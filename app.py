@@ -68,5 +68,16 @@ def immagine3():
     FigureCanvas(fig).print_png(output)
     return Response(output.getvalue(), mimetype='image/png')
 
+@app.route('/es6', methods=['POST'])
+def es6():
+    non=df[df.email.isna()][['first_name','last_name',"phone"]].to_html()
+    return render_template('risultato.html',lista=non)
+
+@app.route('/es7', methods=['POST'])
+def es7():
+    mail=request.form["email"]
+    senza=df.dropna(subset=['email'])
+    provider=senza[senza.email.str.contains(mail)].to_html()
+    return render_template('risultato.html',lista=provider)
 if __name__ == '__main__':
   app.run(host='0.0.0.0', port=3245, debug=True)
